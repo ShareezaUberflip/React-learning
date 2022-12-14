@@ -9,10 +9,13 @@ import axios from 'axios';
 function App() {
   const [people, setPeople] = useState(data);
 
+  const getPerson = async() => {
+    const response = await axios.get('https://jsonplaceholder.typicode.com/users');
+    setPeople(response.data);
+  }
+
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/users').then((response) => {
-      setPeople(response.data);
-    });
+    getPerson();
   }, []);
 
   //const [people, setPeople] = useState(data);
@@ -20,7 +23,7 @@ function App() {
     <>
       <main>
       <section className='container'>
-      <h2>{people.length} Person birthday is today:</h2>;
+      <h2>{people.length} Person birthday is today:</h2>
       <List people={people} />
       </section>
     </main>
