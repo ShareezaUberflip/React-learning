@@ -28,6 +28,7 @@ const ControlledInputs = () => {
   return <>
 
     <section>
+      <h1>Controlled Form</h1>
       <form className='form'>
         <div className='form-control'>
           <label htmlFor='first-name'> First Name: </label>
