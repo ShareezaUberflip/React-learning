@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from './ref-nav/setup/src/Navbar';
+import Example from './tutorial/9-custom-hooks/setup/1-fetch-example';
 function App() {
   return (
     <>
-      <Navbar></Navbar>
+      <Example></Example>
     </>
   );
 }
